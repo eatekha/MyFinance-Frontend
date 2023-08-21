@@ -5,7 +5,6 @@ export const metadata = {
   description: 'Page description',
 }
 import Link from 'next/link'
-import axios from 'axios';
 import React from 'react';
 
 
@@ -74,7 +73,7 @@ export default function SignIn() {
 
           {/* Page header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-            <h1 className="h1">Welcome back. We exist to make entrepreneurship easier.</h1>
+            <h1 className="h1">Welcome! Join MyFinance Today</h1>
           </div>
 
           {/* Form */}
@@ -94,7 +93,7 @@ export default function SignIn() {
             </form>
             <div className="flex items-center my-6">
               <div className="border-t border-gray-700 border-dotted grow mr-3" aria-hidden="true"></div>
-              <div className="text-gray-400">Or, sign in with your email</div>
+              <div className="text-gray-400">Or, sign in with your username</div>
               <div className="border-t border-gray-700 border-dotted grow ml-3" aria-hidden="true"></div>
             </div>
 
