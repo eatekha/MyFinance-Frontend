@@ -7,10 +7,15 @@ export const metadata = {
 import Link from 'next/link'
 import React from 'react';
 
+import { useNavigate } from 'react-router-dom'; // Import useHistory
+
+
+
 
 
 
 export default function SignIn() {
+
   const [username, setUsername] = React.useState('');
   const [password, setPassword] = React.useState(''); 
 
@@ -31,6 +36,8 @@ export default function SignIn() {
         // Successful login
         const data = await response.json();
         console.log('Login successful:', data);
+        window.location.href = 'http://localhost:3001/horizon-ui-chakra#/admin/default'; // Change '/specific-link' to your desired link
+
 
       } else {
         // Error handling for unsuccessful login
