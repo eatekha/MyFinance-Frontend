@@ -1,11 +1,72 @@
+'use client'
+
 export const metadata = {
-  title: 'Sign In - Open PRO',
+  title: 'Sign In',
   description: 'Page description',
 }
-
 import Link from 'next/link'
+import axios from 'axios';
+import React from 'react';
+
+
+
 
 export default function SignIn() {
+  const [username, setUsername] = React.useState('');
+  const [password, setPassword] = React.useState(''); 
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    try {
+      // Make API call to verify credentials
+      const response = await fetch('http://localhost:4000/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ user_name: username, user_password: password }),
+      });
+
+      if (response.ok) {
+        // Successful login
+        const data = await response.json();
+        console.log('Login successful:', data);
+
+      } else {
+        // Error handling for unsuccessful login
+        console.log('Login failed');
+        console.log(username);
+        console.log(password);
+      }
+    } catch (error) {
+      console.log('API error:', error);
+    }
+  };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   return (
     <section className="relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -36,17 +97,26 @@ export default function SignIn() {
               <div className="text-gray-400">Or, sign in with your email</div>
               <div className="border-t border-gray-700 border-dotted grow ml-3" aria-hidden="true"></div>
             </div>
-            <form>
+
+
+
+            <form onSubmit={handleSubmit} >
               <div className="flex flex-wrap -mx-3 mb-4">
                 <div className="w-full px-3">
-                  <label className="block text-gray-300 text-sm font-medium mb-1" htmlFor="email">Email</label>
-                  <input id="email" type="email" className="form-input w-full text-gray-300" placeholder="you@yourcompany.com" required />
+                  <label className="block text-gray-300 text-sm font-medium mb-1" htmlFor="username">Username</label>
+
+
+
+                  <input id="username" type="username" className="form-input w-full text-gray-300" placeholder="you@yourcompany.com" value = {username}   onChange={(e) => setUsername(e.target.value)} required />
+
+
+                  
                 </div>
               </div>
               <div className="flex flex-wrap -mx-3 mb-4">
                 <div className="w-full px-3">
                   <label className="block text-gray-300 text-sm font-medium mb-1" htmlFor="password">Password</label>
-                  <input id="password" type="password" className="form-input w-full text-gray-300" placeholder="Password (at least 10 characters)" required />
+                  <input id="password" type="password" className="form-input w-full text-gray-300" placeholder="Password (at least 10 characters)"  value = {password}   onChange={(e) => setPassword(e.target.value)}required />
                 </div>
               </div>
               <div className="flex flex-wrap -mx-3 mb-4">
@@ -62,10 +132,21 @@ export default function SignIn() {
               </div>
               <div className="flex flex-wrap -mx-3 mt-6">
                 <div className="w-full px-3">
-                  <button className="btn text-white bg-purple-600 hover:bg-purple-700 w-full">Sign in</button>
+                  <button id= "submit" className="btn text-white bg-purple-600 hover:bg-purple-700 w-full">Sign in</button>
                 </div>
               </div>
             </form>
+
+
+
+
+
+
+
+
+
+
+
             <div className="text-gray-400 text-center mt-6">
               Don’t you have an account? <Link href="/signup" className="text-purple-600 hover:text-gray-200 transition duration-150 ease-in-out">Sign up</Link>
             </div>
