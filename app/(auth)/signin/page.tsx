@@ -36,7 +36,7 @@ export default function SignIn() {
         // Successful login
         const data = await response.json();
         console.log('Login successful:', data);
-        window.location.href = 'http://localhost:3001/horizon-ui-chakra#/admin/default'; // Change '/specific-link' to your desired link
+        window.location.href = 'http://localhost:3001/admin/default'; // Change '/specific-link' to your desired link
 
 
       } else {
