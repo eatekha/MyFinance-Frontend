@@ -31,7 +31,7 @@ export default function SignIn() {
         // Successful login
         const data = await response.json();
         const userID = data.userID;
-        window.location.href = `https://my-finance-dashboard-29227dab4c63.herokuapp.com/#/admin/default/?user_id=${userID}`;
+        window.location.href = `https://localhost:3001/#/admin/dashboard/?user_id=${userID}`; //change to real one after
 
 
       } else {
