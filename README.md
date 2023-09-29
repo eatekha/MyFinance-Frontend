@@ -1,2 +1,2 @@
-# MyFinance-Frontend
- Frontend for MyFinanceApp
+# MyFinance-Homepage
+ Homepage for MyFinanceApp
