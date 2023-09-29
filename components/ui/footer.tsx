@@ -36,7 +36,7 @@ xmlnsXlink="http://www.w3.org/1999/xlink" width="100" height="100" xmlSpace="pre
  </svg>
                 </Link>
               </div>
-              <div className="text-gray-400">Made with Express.js, Node.js, Next.js, and React.js, managed with PostgreSQL and Heroku.</div>
+              <div className="text-gray-400">Made with Express.js, Node.js, Next.js,React.js and Chakra UI, managed with PostgreSQL and Heroku.</div>
             </div>
 
           
