@@ -1,9 +1,4 @@
 'use client'
-export const metadata = {
-  title: 'Sign Up',
-  description: 'Page description',
-}
-
 import Link from 'next/link'
 import React, { useState } from 'react'
 
