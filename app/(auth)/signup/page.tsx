@@ -15,7 +15,7 @@ export default function SignUp() {
 
     try {
       // Make API call to verify credentials
-      const response = await fetch('http://localhost:4000/register', {
+      const response = await fetch('https://my-finance-eseosa-62c6b070143e.herokuapp.com/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

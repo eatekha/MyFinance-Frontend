@@ -19,7 +19,7 @@ export default function SignIn() {
 
     try {
       // Make API call to verify credentials
-      const response = await fetch('http://localhost:4000/login', {
+      const response = await fetch('http://https://my-finance-eseosa-62c6b070143e.herokuapp.com/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -31,7 +31,7 @@ export default function SignIn() {
         // Successful login
         const data = await response.json();
         const userID = data.userID;
-        window.location.href = `http://localhost:3001/#/admin/default/?user_id=${userID}`;
+        window.location.href = `https://my-finance-dashboard-29227dab4c63.herokuapp.com/#/admin/default/?user_id=${userID}`;
 
 
       } else {
