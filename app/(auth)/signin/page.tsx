@@ -19,7 +19,7 @@ export default function SignIn() {
 
     try {
       // Make API call to verify credentials
-      const response = await fetch('http://https://my-finance-eseosa-62c6b070143e.herokuapp.com/login', {
+      const response = await fetch('https://my-finance-eseosa-62c6b070143e.herokuapp.com/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
