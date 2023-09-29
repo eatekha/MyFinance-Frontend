@@ -35,8 +35,8 @@ export default function SignIn() {
       if (response.ok) {
         // Successful login
         const data = await response.json();
-        console.log('Login successful:', data);
-        window.location.href = 'http://localhost:3001/admin/default'; // Change '/specific-link' to your desired link
+        const userID = data.userID;
+        window.location.href = `http://localhost:3001/#/admin/default/?user_id=${userID}`;
 
 
       } else {
