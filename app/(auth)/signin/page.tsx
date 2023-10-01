@@ -108,7 +108,7 @@ export default function SignIn() {
 
 
 
-                  <input id="username" type="username" className="form-input w-full text-gray-300" placeholder="you@yourcompany.com" value = {username}   onChange={(e) => setUsername(e.target.value)} required />
+                  <input id="username" type="username" className="form-input w-full text-gray-300" placeholder="e.g. David123" value = {username}   onChange={(e) => setUsername(e.target.value)} required />
 
 
                   
@@ -117,7 +117,7 @@ export default function SignIn() {
               <div className="flex flex-wrap -mx-3 mb-4">
                 <div className="w-full px-3">
                   <label className="block text-gray-300 text-sm font-medium mb-1" htmlFor="password">Password</label>
-                  <input id="password" type="password" className="form-input w-full text-gray-300" placeholder="Password (at least 10 characters)"  value = {password}   onChange={(e) => setPassword(e.target.value)}required />
+                  <input id="password" type="password" className="form-input w-full text-gray-300" placeholder="Password (at least 5 characters)"  value = {password}   onChange={(e) => setPassword(e.target.value)}required />
                 </div>
               </div>
               <div className="flex flex-wrap -mx-3 mb-4">
